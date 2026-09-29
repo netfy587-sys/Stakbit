@@ -1,0 +1,164 @@
+<!-- STAKBIT LANDING PAGE: paste into an Elementor "HTML" widget -->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500;700&family=Nunito:wght@400;600;800&display=swap');
+.sbt{--bg:#fbfcf9;--sage:#e6f0e6;--sage2:#cfe3d0;--leaf:#5f8f6a;--deep:#2f4a3a;--peach:#fbe6dc;--blush:#f8e3e6;--ink:#2b3a30;--mut:#5d6e62;--line:#dbe7dc;background:var(--bg);color:var(--ink);font:400 17px/1.75 Nunito,system-ui,sans-serif}
+.sbt *,.sbt *::before,.sbt *::after{box-sizing:border-box}
+.sbt h1,.sbt h2,.sbt h3{font-family:Lora,Georgia,serif;font-weight:700;line-height:1.2;margin:0 0 .5em;color:var(--deep)}
+.sbt h1{font-size:clamp(2.3rem,5.6vw,3.9rem)}.sbt h2{font-size:clamp(1.8rem,3.8vw,2.6rem)}.sbt h3{font-size:1.2rem}
+.sbt p{margin:0 0 1em}.sbt a{color:inherit}
+.sbt .w{max-width:1080px;margin:0 auto;padding:0 20px}
+.sbt .bar{display:flex;align-items:center;justify-content:space-between;height:72px}
+.sbt .logo{font:700 1.7rem Lora,serif;color:var(--deep);text-decoration:none}.sbt .logo span{color:var(--leaf)}
+.sbt nav{display:flex;gap:26px}.sbt nav a{text-decoration:none;color:var(--mut);font-weight:600;font-size:.95rem}
+@media(max-width:760px){.sbt nav{display:none}}
+.sbt .hero{background:var(--sage);border-radius:0 0 60px 60px;padding-bottom:70px}
+.sbt .hg{display:grid;grid-template-columns:1.1fr 1fr;gap:44px;align-items:center;padding-top:24px}
+.sbt .kick{color:var(--leaf);font-weight:800;margin-bottom:10px}
+.sbt .hero p{font-size:1.15rem;color:var(--mut)}
+.sbt .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.sbt .chips span{background:#fff;border-radius:99px;padding:7px 16px;font-weight:600;font-size:.92rem;color:var(--deep)}
+.sbt svg{display:block;width:100%;height:auto}
+.sbt .arch{border-radius:999px 999px 28px 28px;overflow:hidden}
+@media(max-width:860px){.sbt .hg,.sbt .g3,.sbt .two,.sbt .faq{grid-template-columns:1fr!important}.sbt .arch{max-width:360px;margin:0 auto}}
+.sbt .rib{background:var(--peach);text-align:center;padding:22px 20px;margin-top:-30px;position:relative}
+.sbt .rib h2{margin:0;font-size:clamp(1.3rem,2.8vw,1.9rem)}
+.sbt section{padding:84px 0}.sbt .alt{background:var(--sage)}
+.sbt .head{max-width:720px;margin:0 auto 42px;text-align:center}.sbt .head p{color:var(--mut)}
+.sbt .g3{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.sbt .pc{text-align:center}.sbt .pc .arch{margin-bottom:18px}.sbt .pc p{color:var(--mut)}
+.sbt .g4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+@media(max-width:900px){.sbt .g4{grid-template-columns:1fr 1fr}}@media(max-width:560px){.sbt .g4{grid-template-columns:1fr}}
+.sbt .why{display:grid;grid-template-columns:1fr 1fr;gap:0 44px}
+.sbt .why div{display:flex;gap:14px;padding:18px 0;border-top:1px solid var(--line)}
+.sbt .why .e{font-size:1.8rem;line-height:1}.sbt .why p{margin:0;color:var(--mut)}
+@media(max-width:760px){.sbt .why{grid-template-columns:1fr}}
+.sbt .step{background:#fff;border-radius:26px;padding:26px}
+.sbt .step .ic{width:56px;height:56px;border-radius:50%;background:var(--sage);display:flex;align-items:center;justify-content:center;font-size:1.7rem;margin-bottom:12px}
+.sbt .step p{margin:0;color:var(--mut)}
+.sbt .pl{background:#fff;border-radius:26px;overflow:hidden}
+.sbt .pl .im{background:var(--blush)}.sbt .pl:nth-child(2) .im{background:var(--peach)}.sbt .pl:nth-child(3) .im{background:var(--sage2)}.sbt .pl:nth-child(4) .im{background:#e7e3f4}
+.sbt .pl .tx{padding:18px 20px 22px}.sbt .pl h3{margin-bottom:.3em}.sbt .pl p{margin:0 0 .5em;color:var(--mut);font-size:.96rem}
+.sbt .pet{font-size:.85rem;font-weight:800;color:var(--leaf)}
+.sbt .talk{display:grid;gap:14px;max-width:820px;margin:0 auto}
+.sbt .talk div{display:grid;grid-template-columns:1fr 1.4fr;gap:14px;align-items:center}
+.sbt .q{background:var(--blush);border-radius:22px 22px 22px 6px;padding:14px 20px;font-weight:800;color:var(--deep)}
+.sbt .a{background:#fff;border-radius:22px 22px 6px 22px;padding:14px 20px;color:var(--mut)}
+@media(max-width:700px){.sbt .talk div{grid-template-columns:1fr}}
+.sbt .cal{background:#fff;border-radius:26px;padding:24px}.sbt .cal p{margin:0;color:var(--mut)}.sbt .cal h3{margin-bottom:.3em}
+.sbt .join{background:var(--peach);border-radius:60px;padding:56px 30px;text-align:center}
+.sbt .join p{max-width:60ch;margin:0 auto 1em;color:var(--mut)}
+.sbt .faq{display:grid;grid-template-columns:1fr 1.5fr;gap:48px;align-items:start}
+.sbt .faq p.s{color:var(--mut)}
+.sbt details{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px 22px;margin-bottom:12px}
+.sbt summary{cursor:pointer;font:700 1.08rem Lora,serif;color:var(--deep)}.sbt details p{margin:10px 0 0;color:var(--mut)}
+.sbt .cta{background:var(--deep);color:#fff;text-align:center;border-radius:60px 60px 0 0}
+.sbt .cta h2{color:#fff;max-width:20ch;margin:0 auto .4em}.sbt .cta p{max-width:56ch;margin:0 auto 1em;color:#d5e6d8}
+.sbt .cta .lm{color:#f8d7c4;font-weight:800;margin:0}
+.sbt footer{background:var(--deep);color:#b9d0bf;padding:24px 0;font-size:.9rem;border-top:1px solid #456a55}
+.sbt footer .w{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+</style>
+
+<div class="sbt" id="top">
+<div class="hero">
+<div class="w bar"><a class="logo" href="#top">Stakbit<span>.</span></a>
+<nav><a href="#promise">Why us</a><a href="#care">Plant care</a><a href="#plants">Easy plants</a><a href="#faq">FAQ</a></nav></div>
+<div class="w hg">
+<div>
+<div class="kick">🌿 Creating a Magical Atmosphere</div>
+<h1>Stakbit: grow a greener home, one leaf at a time</h1>
+<p>Designed for dreamers, built for doers. Your Online Adventures Platform for plants, with care guides and calm inspiration, Anytime, Anywhere, Anything.</p>
+<p>Click today and unlock exclusive benefits.</p>
+<div class="chips"><span>🌱 Incredible Fun And More</span><span>🔒 Safe &amp; Secure</span><span>✨ Breathtaking Experience</span></div>
+</div>
+<div class="arch"><svg viewBox="0 0 400 480" role="img" aria-label="A leafy plant in a terracotta pot beside a window sun">
+<rect width="400" height="480" fill="#f3f8f2"/><circle cx="290" cy="130" r="70" fill="#fbe6dc"/><circle cx="290" cy="130" r="46" fill="#f8d7c4"/>
+<rect x="0" y="400" width="400" height="80" fill="#cfe3d0"/>
+<g stroke="#5f8f6a" stroke-width="5" stroke-linecap="round" fill="none"><path d="M200 330 C190 260 130 230 110 170"/><path d="M200 330 C200 250 210 190 200 120"/><path d="M200 330 C215 260 270 240 300 190"/><path d="M200 330 C170 300 120 300 90 270"/></g>
+<g fill="#7fae86"><ellipse cx="105" cy="160" rx="46" ry="24" transform="rotate(-50 105 160)"/><ellipse cx="200" cy="105" rx="48" ry="26" transform="rotate(-90 200 105)"/><ellipse cx="305" cy="180" rx="46" ry="24" transform="rotate(-35 305 180)"/><ellipse cx="85" cy="268" rx="44" ry="22" transform="rotate(-20 85 268)"/></g>
+<g fill="#a5cfaa"><ellipse cx="130" cy="230" rx="34" ry="18" transform="rotate(-30 130 230)"/><ellipse cx="270" cy="250" rx="34" ry="18" transform="rotate(30 270 250)"/></g>
+<path d="M140 330 h120 l-14 84 h-92z" fill="#e8b5a0"/><rect x="132" y="318" width="136" height="20" rx="8" fill="#dda58f"/>
+</svg></div>
+</div></div>
+<div class="rib"><h2>Discover the perfect blend of quality and value.</h2></div>
+</div>
+
+<section id="promise"><div class="w">
+<div class="head"><h2>Because you deserve something truly special ✨</h2><p>More than a product, it's a lifestyle. Three promises sit at the heart of Stakbit.</p></div>
+<div class="g3">
+<div class="pc"><div class="arch"><svg viewBox="0 0 300 300" role="img" aria-label="Seedlings in small pots"><rect width="300" height="300" fill="#f8e3e6"/><g fill="#e8b5a0"><path d="M50 210h64l-8 50H58z"/><path d="M118 220h64l-8 50h-48z" transform="translate(4 -8)"/><path d="M190 210h64l-8 50h-48z"/></g><g stroke="#5f8f6a" stroke-width="4" stroke-linecap="round"><path d="M82 210v-40M154 212v-52M222 210v-38"/></g><g fill="#7fae86"><ellipse cx="68" cy="165" rx="20" ry="10" transform="rotate(-30 68 165)"/><ellipse cx="96" cy="160" rx="20" ry="10" transform="rotate(30 96 160)"/><ellipse cx="138" cy="152" rx="20" ry="10" transform="rotate(-30 138 152)"/><ellipse cx="170" cy="146" rx="20" ry="10" transform="rotate(30 170 146)"/><ellipse cx="206" cy="166" rx="20" ry="10" transform="rotate(-30 206 166)"/><ellipse cx="238" cy="162" rx="20" ry="10" transform="rotate(30 238 162)"/></g></svg></div>
+<h3>Incredible Fun And More</h3><p>Plant swaps, growing challenges and friendly community chats. Try it out today and you'll never be disappointed.</p></div>
+<div class="pc"><div class="arch"><svg viewBox="0 0 300 300" role="img" aria-label="A shield with a leaf"><rect width="300" height="300" fill="#e6f0e6"/><path d="M150 50 L228 78 V150 C228 200 190 235 150 255 C110 235 72 200 72 150 V78Z" fill="#cfe3d0" stroke="#5f8f6a" stroke-width="5"/><path d="M150 200 C150 160 150 130 150 105 M150 170 C125 165 112 150 108 132 C130 132 146 145 150 170 M150 150 C175 145 188 130 192 112 C170 112 154 125 150 150" stroke="#5f8f6a" stroke-width="6" fill="none" stroke-linecap="round"/></svg></div>
+<h3>Safe &amp; Secure</h3><p>Healthy, carefully packed plants and protected payments. Experience excellence without compromise.</p></div>
+<div class="pc"><div class="arch"><svg viewBox="0 0 300 300" role="img" aria-label="A shelf of plants"><rect width="300" height="300" fill="#fbe6dc"/><rect x="30" y="200" width="240" height="12" rx="6" fill="#c99a82"/><g fill="#e8b5a0"><path d="M50 200l6-40h40l6 40z"/><path d="M130 200l6-56h40l6 56z"/><path d="M212 200l6-34h34l6 34z"/></g><g fill="#7fae86"><ellipse cx="76" cy="140" rx="12" ry="28"/><ellipse cx="60" cy="146" rx="10" ry="24" transform="rotate(-25 60 146)"/><ellipse cx="92" cy="146" rx="10" ry="24" transform="rotate(25 92 146)"/><circle cx="156" cy="112" r="34" fill="#a5cfaa"/><circle cx="140" cy="126" r="20"/><circle cx="174" cy="126" r="20"/><ellipse cx="234" cy="140" rx="12" ry="26"/><ellipse cx="220" cy="146" rx="10" ry="22" transform="rotate(-25 220 146)"/></g></svg></div>
+<h3>Breathtaking Experience</h3><p>Beautiful guides and inspiration that make everyday corners feel alive. Act fast: limited time, unlimited value.</p></div>
+</div></div></section>
+
+<section class="alt"><div class="w">
+<div class="head"><h2>Why Stakbit feels different 🌍</h2><p>We are a well-respected name among plant lovers, from first-time growers to lifelong gardeners.</p></div>
+<div class="why">
+<div><span class="e">🍀</span><span><h3>New chapter of luck begins now</h3><p>A fresh start for your space with plants that suit your light.</p></span></div>
+<div><span class="e">🌐</span><span><h3>Anytime, Anywhere, Anything</h3><p>Browse guides, ask questions and plan your plants on any device.</p></span></div>
+<div><span class="e">⏳</span><span><h3>Don't wait: your future starts now</h3><p>Plants grow slowly, so the best day to start is today.</p></span></div>
+<div><span class="e">🌱</span><span><h3>Small changes create big impacts</h3><p>One brighter window or one better watering habit can transform a plant.</p></span></div>
+</div></div></section>
+
+<section id="care"><div class="w">
+<div class="head"><p style="color:var(--leaf);font-weight:800;margin-bottom:6px">📖 Stakbit guide · 5 min read</p><h2>Houseplant care in five simple habits</h2><p>Most plant trouble comes from light and water. Get these five right and the rest is easy.</p></div>
+<div class="g4" style="grid-template-columns:repeat(3,1fr)">
+<div class="step"><div class="ic">☀️</div><h3>Give it the right light</h3><p>Most houseplants like bright, indirect light. Direct midday sun can scorch leaves, while a dark corner makes plants stretch and weaken.</p></div>
+<div class="step"><div class="ic">💧</div><h3>Water only when needed</h3><p>Overwatering is a very common cause of plant loss. Push a finger into the soil, and water when the top few centimetres feel dry.</p></div>
+<div class="step"><div class="ic">🪴</div><h3>Choose pots with drainage</h3><p>Holes at the bottom let extra water escape so roots do not sit in wet soil. Pick a pot only slightly bigger than the root ball.</p></div>
+<div class="step"><div class="ic">🌡️</div><h3>Keep conditions steady</h3><p>Avoid cold draughts, heaters and sudden changes. Most common houseplants prefer normal room temperatures.</p></div>
+<div class="step"><div class="ic">🌿</div><h3>Feed gently in the growing season</h3><p>A diluted plant food in spring and summer is enough for most plants. Ease off in autumn and winter when growth slows.</p></div>
+<div class="step" style="background:var(--deep)"><div class="ic" style="background:#456a55">👀</div><h3 style="color:#fff">Check in weekly</h3><p style="color:#d5e6d8">Look under leaves for pests, turn the pot for even light and remove dry leaves. Small, regular attention beats big rescues.</p></div>
+</div></div></section>
+
+<section class="alt" id="plants"><div class="w">
+<div class="head"><h2>Four easy plants to start with 🪴</h2><p>Forgiving, common and lovely. Always check that a plant suits your light, and your pets, before buying.</p></div>
+<div class="g4">
+<div class="pl"><div class="im"><svg viewBox="0 0 200 200" role="img" aria-label="Snake plant"><g fill="#6f9f78"><path d="M100 150 L88 40 L108 150z"/><path d="M100 150 L66 70 L92 150z" fill="#8bb894"/><path d="M104 150 L132 60 L118 150z" fill="#8bb894"/><path d="M100 150 L150 100 L112 150z"/></g><path d="M62 150h76l-10 40H72z" fill="#e8b5a0"/></svg></div><div class="tx"><h3>Snake plant</h3><p>Copes with low light and irregular watering.</p><span class="pet">🐾 Toxic to pets if eaten</span></div></div>
+<div class="pl"><div class="im"><svg viewBox="0 0 200 200" role="img" aria-label="Pothos"><path d="M62 90h76l-10 44H72z" fill="#e8b5a0"/><g stroke="#6f9f78" stroke-width="3" fill="none"><path d="M80 90 C60 120 66 150 74 180"/><path d="M120 90 C140 118 132 150 126 182"/><path d="M100 90 C100 120 104 150 100 176"/></g><g fill="#8bb894"><ellipse cx="68" cy="130" rx="9" ry="6"/><ellipse cx="74" cy="168" rx="9" ry="6"/><ellipse cx="136" cy="128" rx="9" ry="6"/><ellipse cx="127" cy="170" rx="9" ry="6"/><ellipse cx="100" cy="132" rx="9" ry="6"/><ellipse cx="100" cy="168" rx="9" ry="6"/><ellipse cx="90" cy="82" rx="16" ry="9"/><ellipse cx="114" cy="80" rx="16" ry="9"/></g></svg></div><div class="tx"><h3>Pothos</h3><p>Adaptable trailing vine that shows you when it is thirsty.</p><span class="pet">🐾 Toxic to pets if eaten</span></div></div>
+<div class="pl"><div class="im"><svg viewBox="0 0 200 200" role="img" aria-label="ZZ plant"><g stroke="#5f8f6a" stroke-width="4" fill="none"><path d="M100 150 C90 110 70 80 62 50"/><path d="M100 150 C100 100 104 70 100 34"/><path d="M100 150 C112 110 132 84 142 56"/></g><g fill="#6f9f78"><ellipse cx="58" cy="70" rx="8" ry="14"/><ellipse cx="72" cy="94" rx="8" ry="14"/><ellipse cx="94" cy="60" rx="8" ry="14"/><ellipse cx="106" cy="90" rx="8" ry="14"/><ellipse cx="138" cy="76" rx="8" ry="14"/><ellipse cx="124" cy="104" rx="8" ry="14"/></g><path d="M62 150h76l-10 40H72z" fill="#e8b5a0"/></svg></div><div class="tx"><h3>ZZ plant</h3><p>Stores water, so it forgives forgetful owners.</p><span class="pet">🐾 Toxic to pets if eaten</span></div></div>
+<div class="pl"><div class="im"><svg viewBox="0 0 200 200" role="img" aria-label="Spider plant"><g stroke="#8bb894" stroke-width="7" stroke-linecap="round" fill="none"><path d="M100 140 C60 100 40 110 30 150"/><path d="M100 140 C80 90 60 60 50 40"/><path d="M100 140 C120 90 150 70 166 44"/><path d="M100 140 C140 100 170 120 172 156"/><path d="M100 140 C100 100 100 70 100 46"/></g><path d="M62 140h76l-10 46H72z" fill="#e8b5a0"/></svg></div><div class="tx"><h3>Spider plant</h3><p>Fast-growing and easy, with arching striped leaves.</p><span class="pet">🐾 Generally considered pet-safe</span></div></div>
+</div></div></section>
+
+<section><div class="w">
+<div class="head"><h2>What your plant is telling you 💬</h2><p>Leaves give clues. Here are common signs and the usual causes.</p></div>
+<div class="talk">
+<div><span class="q">Yellow, soft leaves</span><span class="a">Often too much water or poor drainage. Let the soil dry and check the pot holes.</span></div>
+<div><span class="q">Crispy brown tips</span><span class="a">Usually dry air, irregular watering or too much plant food.</span></div>
+<div><span class="q">Long, leggy growth</span><span class="a">Not enough light. Move it closer to a bright window.</span></div>
+<div><span class="q">Drooping leaves</span><span class="a">Check the soil first. Both very dry and waterlogged soil can cause it.</span></div>
+</div></div></section>
+
+<section class="alt"><div class="w">
+<div class="head"><h2>A simple seasonal rhythm 🗓️</h2></div>
+<div class="g4">
+<div class="cal"><h3>🌸 Spring</h3><p>Growth restarts. Repot if roots are crowded and begin light feeding.</p></div>
+<div class="cal"><h3>☀️ Summer</h3><p>Water more often and shield plants from harsh midday sun.</p></div>
+<div class="cal"><h3>🍂 Autumn</h3><p>Reduce feeding and watch for pests before moving plants indoors.</p></div>
+<div class="cal"><h3>❄️ Winter</h3><p>Water less, keep plants away from cold glass and heaters.</p></div>
+</div></div></section>
+
+<section><div class="w"><div class="join">
+<h2>Join thousands already making the switch 💬</h2>
+<p>People choose Stakbit because plants make homes calmer, and our guides make growing simple. Enjoy a Breathtaking Experience while you learn at your own pace.</p>
+</div></div></section>
+
+<section class="alt" id="faq"><div class="w faq">
+<div><h2>Frequently asked questions ❓</h2><p class="s">Can't find your answer? Our support team replies in plain language.</p></div>
+<div>
+<details><summary>Is it free to join?</summary><p>Yes. You can create an account and read every guide for free.</p></details>
+<details><summary>Which plant is best for a beginner?</summary><p>Snake plants, pothos, ZZ plants and spider plants are forgiving choices for most homes.</p></details>
+<details><summary>How often should I water?</summary><p>There is no fixed schedule. Check the soil with your finger and water when the top few centimetres are dry.</p></details>
+<details><summary>Are houseplants safe for pets?</summary><p>Some are not. Check each plant before buying, and keep toxic ones out of reach of curious pets.</p></details>
+</div></div></section>
+
+<section class="cta"><div class="w">
+<h2>Your future starts now with Stakbit 🌿</h2>
+<p>Create a free account and unlock exclusive member benefits. Try it out today and you'll never be disappointed.</p>
+<p class="lm">Act fast: limited time, unlimited value.</p>
+</div></section>
+
+<footer><div class="w"><span>© 2026 Stakbit. Online Adventures Platform.</span><span>Designed for dreamers, built for doers.</span></div></footer>
+</div>
